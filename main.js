@@ -68,6 +68,14 @@ function setup(){
     
         if (scoreRightWrist>0.2) {
             circle(rightWristx , rightWristy , 30);
+            music1.stop();
+            music2_status = music2.isPlaying();
+ 
+            if (music2_status == false) {
+                music2.play();
+ 
+                document.getElementById("song_name").innerHTML= "Playing Peter Pan Music";
+            }
         }
     
     }
